@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var visitorCountElement = document.getElementById('visitorCount');
+    var count = 50000;
+
+    function updateVisitorCount() {
+        if (count <= 100000) {
+            visitorCountElement.textContent = 'Visitors Count: ' + count;
+            count += 1; // Increment by 1
+            setTimeout(updateVisitorCount, 3000); // Adjust the timeout value to control the speed of counting (in milliseconds)
+        }
+    }
+
+    updateVisitorCount();
+});
+
 (function ($) {
     "use strict";
 
