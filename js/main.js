@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
     var visitorCountElement = document.getElementById('visitorCount');
-    var count = 50000;
+    var count = parseInt(localStorage.getItem('visitorCount'));
 
-    function updateVisitorCount() {
-        if (count <= 100000) {
-            visitorCountElement.textContent = 'Visitors Count: ' + count;
-            count += 1; // Increment by 1
-            setTimeout(updateVisitorCount, 3000); // Adjust the timeout value to control the speed of counting (in milliseconds)
-        }
+    if (isNaN(count) || count < 120000) {
+        count = 120000;
+        localStorage.setItem('visitorCount', count.toString());
     }
-
-    updateVisitorCount();
+    visitorCountElement.textContent = 'Visitors Count: ' + count;
+    count++;
+    localStorage.setItem('visitorCount', count.toString());
 });
+
+
 
 (function ($) {
     "use strict";
