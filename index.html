@@ -38,8 +38,42 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+  .custom-form-outer-container {
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6, #b3d9ff);
+    border: 2px solid #0070ac;
+    border-radius: 0;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.8); /* Adjust the alpha (last value) for brightness */
+}
 
-@media only screen and (max-width: 768px) {
+.custom-form-inner-container {
+    margin: 10px;
+}
+
+.custom-form-control {
+    border: 1px solid #0070ac;
+    border-radius: 0;
+    padding: 10px;
+}
+
+.custom-btn-primary {
+    background-color: #0070ac;
+    border: 2px solid #0070ac;
+    border-radius: 0;
+    padding: 10px 20px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn-primary:hover {
+    background-color: #005682;
+    border-color: #005682;
+}
+
+
+
+  
+@media (max-width: 768px) {
   /* Styles for screens smaller than 768px (adjust the max-width as needed) */
 
   .nav-bar {
@@ -53,15 +87,20 @@
   }
 
   .carousel-item img {
-    height: auto; /* Adjust the image height to fit smaller screens */
+    max-width: 100%; /* Make the image responsive and fill the container */
+    height: 300px; /* Set a fixed height as per your preference */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
   }
 
   .website-counter {
     margin-left: 0; /* Reset margin for the counter */
   }
 
+  
+
   /* Add more styles for other elements as needed */
 }
+
      .nav-bar {
     display: flex;
     align-items: center;
@@ -81,6 +120,7 @@
     height: auto;
     object-fit:fill;
 }
+
       </style>
 </head>
 
@@ -120,19 +160,24 @@
     <!-- Header Start -->
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <!-- Add a new button for the new image (Slide 4) -->
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/WhatsApp Image 2023-12-17 at 20.58.14.jpeg" class="d-block w-100" alt="..." >
+                <img src="img/india img.png" class="d-block w-100" alt="..." style="height: 500px;">
+            </div>
+            <!-- <div class="carousel-item">
+                <img src="img/ap-elections-2024.jpeg" class="d-block w-100" alt="..." style="height: 500px;">
+            </div> -->
+            <div class="carousel-item">
+                <img src="img/ap26districsts.jpeg" class="d-block w-100" alt="..." style="height: 500px;">
             </div>
             <div class="carousel-item">
-                <img src="img/ap-elections-2024.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img/banner.png" class="d-block w-100" alt="...">
+                <img src="img/banner.png" class="d-block w-100" alt="..." style="height: 500px;">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -143,7 +188,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
+    
 
     <div style="    display: flex;
         flex-direction: column;
@@ -175,7 +221,76 @@
 
     <!-- Team End -->
 
-
+      <!-- Custom Form Start -->
+      <div class="container mt-5 custom-form-outer-container">
+        <form class="php-email-form" onsubmit="return validateForm()">
+            <div class="custom-form-inner-container">
+                <div class="row">
+                    <div class="form-group col-md-6" style="padding: 10px;">
+                        <input type="text" name="name" class="form-control custom-form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group col-md-6" style="padding: 10px;">
+                        <input type="email" class="form-control custom-form-control" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6" style="padding: 10px;">
+                        <input type="text" class="form-control custom-form-control" name="mobile" id="mobile" placeholder="Your Mobile Number" required>
+                    </div>
+                    <div class="form-group col-md-6" style="padding: 10px;">
+                        <input type="text" class="form-control custom-form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control custom-form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                    <!-- <div class="loading">Loading</div> -->
+                    <div class="error-message"></div>
+                    <div class="sent-message" id="successMessage" style="display: none;">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn custom-btn-primary">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+      <!-- <div class="container mt-5 custom-form-outer-container">
+        <form method="post" role="form" class="php-email-form" onsubmit="return validateForm()">
+            <div class="custom-form-inner-container">
+                <div class="row">
+                    <div class="form-group col-md-6" style="padding: 10px;">
+                        <input type="text" name="name" class="form-control custom-form-control" id="name" placeholder="Your Name" required="">
+                    </div>
+                    <div class="form-group col-md-6" style="padding: 10px;">
+                        <input type="email" class="form-control custom-form-control" name="email" id="email" placeholder="Your Email" required="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6" style="padding: 10px;">
+                        <input type="text" class="form-control custom-form-control" name="mobile" id="mobile" placeholder="Your Mobile Number" required="">
+                    </div>
+                    <div class="form-group col-md-6" style="padding: 10px;">
+                        <input type="text" class="form-control custom-form-control" name="subject" id="subject" placeholder="Subject" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control custom-form-control" name="message" id="message" rows="5" placeholder="Message" required=""></textarea>
+                </div>
+                <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn custom-btn-primary">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </div> -->
+    
+    
+    <!-- Custom Form End -->
 
 
     <!-- Footer Start -->
@@ -259,7 +374,29 @@
    localStorage.setItem("page_view", visitCount);
    counterContainer.innerHTML = visitCount;
    
-   
+   function validateForm() {
+    // Get form elements
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var mobile = document.getElementById('mobile').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+
+    // Validate if at least one field is filled
+    if (name === '' && email === '' && mobile === '' && subject === '' && message === '') {
+        alert('Please enter at least one field before submitting.');
+        return false;
+    }
+
+    // Display success message
+    var successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+
+    // Optionally, you can reset the form after successful submission
+    document.getElementById('php-email-form').reset();
+
+    return true;
+}
        </script>
 </body>
 

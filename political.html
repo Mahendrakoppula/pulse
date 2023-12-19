@@ -46,6 +46,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      @media (max-width: 767px) {
+    .page-header {
+      height: 280px !important; /* Add !important to ensure the style is applied */
+    }
+  }
+    </style>
   </head>
 
   <body>
@@ -89,27 +96,18 @@
 
     <!-- Page Header Start -->
     <div
-    class="container-fluid page-header py-5 mb-5 wow fadeIn"
-    data-wow-delay="0.1s"
-    style="
+     class="container-fluid page-header py-5 mb-5 wow fadeIn"
+     data-wow-delay="0.1s"
+     style="
       height: 700px; /* You can adjust this value to make it bigger */
       visibility: visible;
       animation-delay: 0.1s;
       animation-name: fadeIn;
-      background-image: url('img/Ap map.jpeg');
+      background-image: url('img/totalap.png');
       background-size: cover;
       background-position: center center;
-    "
-    >
-      <div class="container py-5">
-        <h1
-          class="display-3 text-primary mb-3 slideInDown"
-          style="color: orange"
-        >
-          
-        </h1>
-        <nav aria-label="breadcrumb animated slideInDown"></nav>
-      </div>
+     "
+     >
     </div>
 
 
@@ -124,20 +122,20 @@
               <div class="col-lg-3 col-md-6">
                 <div class="team-item position-relative rounded overflow-hidden">
                     <div class="overflow-hidden" style="height: 197px;">
-                        <img class="img-fluid" src="img/YSRCP.webp" alt="">
+                        <img class="img-fluid" src="img/BJP.jpeg" alt="">
                     </div>
                     <div class="team-text bg-light text-center p-4">
-                        <h5>Yuvajana Shramika Rythu Congress Party</h5>
+                        <h5>Bharatiya Janata Party</h5>
                     </div>
                 </div>
             </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="team-item position-relative rounded overflow-hidden h-100">
                       <div class="overflow-hidden" style="height: 197px;">
-                            <img class="img-fluid" src="img/TDP.webp" alt="">
+                            <img class="img-fluid" src="img/congress-new.png" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Telugu Desam Party</h5>
+                            <h5>Congress</h5>
                         </div>
                     </div>
                 </div>
@@ -145,43 +143,53 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="team-item position-relative rounded overflow-hidden h-100">
                         <div class="overflow-hidden" style="height: 197px;">
-                            <img class="img-fluid" src="img/janasen alogo.png" alt="" style="padding-top: 40px;">
+                            <img class="img-fluid" src="img/YSRCP.webp" alt="" style="padding-top: 40px;">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Jana Sena Party</h5>
+                            <h5>Yuvajana Shramika Rythu Congress Party</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden" style="height: 197px;">
-                            <img class="img-fluid" src="img/BJP.jpeg" alt="" style="height: 210px; width: 100%;" >
+                            <img class="img-fluid" src="img/TDP.webp" alt="" style="height: 210px; width: 100%;" >
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Bharatiya Janata Party</h5>
+                            <h5>Telugu Desam Party</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                   <div class="team-item position-relative rounded overflow-hidden">
                       <div class="overflow-hidden" style="height: 197px;">
-                          <img class="img-fluid" src="img/congress.webp" alt="" style="height: 210px; width: 100%;" >
+                          <img class="img-fluid" src="img/janasen alogo.png" alt="" style="height: 210px; width: 100%;" >
                       </div>
                       <div class="team-text bg-light text-center p-4">
-                          <h5>Congress</h5>
+                          <h5>Jana Sena Party</h5>
                       </div>
                   </div>
               </div>
               <div class="col-lg-3 col-md-6">
                 <div class="team-item position-relative rounded overflow-hidden">
                     <div class="overflow-hidden" style="height: 197px;">
-                        <img class="img-fluid" src="img/cpi.jpeg" alt="" style="height: 210px; width: 100%;" >
+                        <img class="img-fluid" src="img/cpi-new.jpeg" alt="" style="height: 210px; width: 100%;" >
                     </div>
                     <div class="team-text bg-light text-center p-4">
                         <h5>Communist Party of India</h5>
                     </div>
                 </div>
-            </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="team-item position-relative rounded overflow-hidden">
+                    <div class="overflow-hidden" style="height: 197px;">
+                        <img class="img-fluid" src="img/cpm-twitter.jpeg" alt="" style="height: 210px; width: 100%;" >
+                    </div>
+                    <div class="team-text bg-light text-center p-4">
+                        <h5>Communist Party of India (Marxist)</h5>
+                    </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
@@ -204,24 +212,27 @@
       </div>
     </div> -->
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-lg-6">
-        <!-- Chart on the Left -->
-        <canvas id="populationChart" width="300" height="225"></canvas>
+    <div class="container mt-5">
+      <div class="row">
+          <div class="col-lg-6">
+              <!-- Content on the Left -->
+              <div class="col-lg-6" style="padding-top: 80px;">
+                  <h2 class="text-center mb-4">Projected Population Chart in Andhra Pradesh</h2>
+                  <div class="content">
+                      <p>
+                          This chart shows the projected population for the years 2011,
+                          2021, 2022, and 2023.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <!-- Chart on the Right -->
+          <div class="col-lg-6">
+              <canvas id="populationChart" width="300" height="225"></canvas>
+          </div>
       </div>
-      <div class="col-lg-6" style="padding-top: 80px;">
-        <!-- Heading on the Right -->
-        <h2 class="text-center mb-4">Projected Population Chart</h2>
-        <div class="content">
-          <p>
-            This chart shows the projected population for the years 2011,
-            2021, 2022, and 2023.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
+  
 
   <div>
    
@@ -229,33 +240,43 @@
   </div>
   <div class="container mt-5">
     <div class="row">
-        <div class="col-lg-6" style="padding-top: 80px;">
+        <div class="col-lg-6" style="padding-top: 140px;">
             <!-- Heading on the Left -->
             
             <div class="content">
-              <h4> district wise population in Andhra Pradesh</h4>
+              <h4> District wise population in Andhra Pradesh</h4>
               <div class="content">
                 <p>
-                  East Godavari,
-                  Guntur,
-                  Krishna,
+                  Vizianagaram,
                   Visakhapatnam,
-                  Chittoor,
-                  Anantapur,
-                  Kurnool,
+                  Alluri Sitharama Raju,
+                  Anakapalli,
+                  Kakinada,
+                  East Godavari,
+                  Dr. B. R. Ambedkar Konaseema,
+                  Eluru,
                   West Godavari,
+                  NTR,
+                  Krishna,
+                  Palnadu,
+                  Guntur,
+                  Bapatla,
                   Prakasam,
                   Sri Potti Sriramulu Nellore,
+                  Kurnool,
+                  Nandyal,
+                  Anantapur,
+                  Sri Sathya Sai,
                   YSR,
-                  Srikakulam,
-                  Nizamabad,
-                  Vizianagaram</p>
+                  Annamayya,
+                  Tirupati,
+                  Chittoor</p>
             </div>
             </div>
         </div>
         <div class="col-lg-6">
             <!-- Chart on the Right -->
-            <img class="img-fluid" src="img/Population.png" alt="">
+            <img class="img-fluid" src="img/Official district names.png" alt="">
         </div>
     </div>
 </div>
