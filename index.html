@@ -109,6 +109,21 @@
     /* height: auto; */
     object-fit:contain;
 }
+.scrolling-text {
+    white-space: nowrap;
+    font-size: 18px; /* Adjust the font size as needed */
+    color: #0070ac; /* Adjust the color as needed */
+    margin-top: 10px; /* Adjust the margin as needed */
+    overflow: hidden;
+    position: relative;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
 
       </style>
 </head>
@@ -189,6 +204,10 @@
     <!-- <div class="scrolling-paragraph">
         <h1>PULSE SURVEY or PULSE SURVEY EMPLOYEES HAVE NO PERSONAL RELATIONSHIP WITH ANY POLITICAL PARTIES or INDIVIDUALS, WE SERVE THE INTERESTED PERSONS ONLY AT THEIR DISCRETION</h1>
       </div> -->
+      <div class="scrolling-content">
+        <p class="scrolling-text">Pulse Survey employees have no personal relationship with any political parties or individuals; we serve the interested persons only at their direction</p>
+        <!-- Add other content you want to scroll horizontally here -->
+    </div>
     
 
     <div style="    display: flex;
