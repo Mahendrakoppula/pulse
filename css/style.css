@@ -163,9 +163,26 @@
       right: 0;
     }
   }
-  
 
+  /*** Scroll ***/
 
+  /* @keyframes scrollLeft {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .scrolling-paragraph {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 250%;
+    margin: 0 auto;
+    animation: scrollLeft 25s linear infinite;
+  } */
 
 /*** Button ***/
 .btn {
@@ -361,7 +378,7 @@
 }
 
 .page-header {
-    background: url(../img/logo/girl-using-interface-with-graphs_155003-3875.jpg) top center no-repeat;
+    background: url(../img/logo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-102204.jpg) top center no-repeat;
     background-size: cover;
     text-shadow: 0 0 30px rgba(0, 0, 0, .1);
 }

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pulse</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link
+    rel="shortcut icon"
+    href="img/pulse logo transperent.png"
+    type="image/x-icon"
+  />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .address-text {
+            font-size: 0.8em; /* Adjust the font size as needed */
+            /* Add any additional styling as needed */
+        }
+        
+        @media (max-width: 767px) {
+    .page-header h1 {
+        font-size: 2em;
+    }
+
+    .breadcrumb {
+        font-size: 0.8em;
+    }
+
+    .form-label {
+        font-size: 0.9em;
+    }
+
+    .form-control {
+        font-size: 0.9em;
+    }
+
+    .btn-primary {
+        font-size: 1em;
+    }
+
+    .footer {
+        padding-top: 20px;
+    }
+
+    .footer img {
+        width: 100px;
+    }
+
+    .footer h4 {
+        font-size: 1.2em;
+    }
+
+    .footer p {
+        font-size: 0.9em;
+    }
+
+    .address-text {
+        font-size: 0.8em;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <li class='logo'><a href=''><img src='img/logo/pulse logo update.png' /></a></li>
+                <p id="visitorCount">Visitors Count: 120,000</p>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="political.html">Political Parties</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times" fill="blue"
+                            style="color: #0070ac;"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars" fill="blue"
+                        style="color: #0070ac;"></i></label>
+            </ul>
+        </nav>
+    </header>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Contact</li> -->
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6" >
+                <!-- Existing content (you may have an existing paragraph or section here) -->
+                <h2 style="font-size: 50px;">Welcome to Pulse Survey</h2>
+                <!-- Add the provided text here -->
+                <p style="font-size: 20px;">Pulse Survey, our esteemed company, boasts a team of dedicated professionals who bring an unwavering
+                    passion to the realms of research, data analysis, and strategic planning. With a commitment to
+                    excellence, we strive to deliver unparalleled services, empowering our clients with informed
+                    decisions and strategic insights. At Pulse Survey, we understand the pulse of your needs, ensuring
+                    tailored solutions and impactful results.</p>
+            </div>
+            <div class="col-md-6">
+                <form id="contact-form" onsubmit="return validateForm()">
+                    <h5>Connect with Us !!</h5>
+                    <div class="row mb-3">
+                        <div class="col">
+                          <input for="name" type="text" class="form-control" placeholder="Full Name" aria-label="First name">
+                        </div>
+                        <div class="col">
+                          <input for="phone" type="number" class="form-control" placeholder="Phone Number" aria-label="Last name">
+                        </div>
+                      </div>
+                    <div class="mb-3">
+                    
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                      
+                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-3">
+                      
+                        <textarea class="form-control" id="message" placeholder="Message"
+                            style="height: 100px" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <!-- Success message container -->
+                    <div id="successMessage" class="mt-3 alert alert-success" style="display: none;">Message sent
+                        successfully!</div>
+                </form>
+                <!-- Add other columns or content as needed -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+                        style="width: 55px; height: 55px;">
+                        <i class="fa fa-map-marker-alt text-primary"></i>
+                    </div>
+                    <div class="ms-4">
+                        <p class="mb-2">Address</p>
+                        <h5 class="mb-0">
+                            <span class="text-muted">Operations branch:</span>
+                            <span class="address-text">1st Floor, Saraswati Complex, SVN Colony, Guntur - 522006</span>
+                        </h5>
+                        <br>
+                        <h5 class="mb-0">
+                            <span class="text-muted">Registered Office: </span>
+                            <span class="address-text">Hyderabad</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="h-100 bg-light rounded d-flex align-items-center p-3">
+                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+                        style="width: 55px; height: 55px;">
+                        <i class="fa fa-envelope-open text-primary"></i>
+                    </div>
+                    <div class="ms-4">
+                        <p class="mb-2">Mail Us Now</p>
+                        <h5 class="mb-0">pulsesurvey2@gmail.com</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="margin-left: 10px;margin-top: 39px;widt: 1700px;width: 1700px;bility: visible;animation-delay: 0.5s;animation-name: fadeIn;">
+                <div class="h-100" style="min-height: 400px;">
+                    <iframe class="rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7657.885846622369!2d80.41066789075613!3d16.325860381484464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a358b22eccb5ee7%3A0x9d1fb24badb68f47!2sSaraswati%20Heights!5e0!3m2!1sen!2sin!4v1702734681790!5m2!1sen!2sin"
+                        frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background-image: linear-gradient(to top, black, #0463fa) !important;;">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-md-4 ">
+                    <img src="img/logo/pulse logo update.png" alt="" style="width: 120px;" class="mb-3">
+                    <p class="mb-2">Our team of professionals is passionate about Research, Data analysis, and Strategic
+                        Planning.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: white;">Contact Us</h4>
+                    <p class="mail">
+                        <a href="http://www.pulsesurvey.in" target="_blank">www.pulsesurvey.in</a><br>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>pulsesurvey2@gmail.com</p>
+
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Operations Branch: 1st Floor, Saraswati
+                        Complex, SVN Colony, Guntur - 522006</p>
+
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Registered office :
+                        Hyderabad</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Pulse</a>, All Right Reserved.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+         function validateForm() {
+    // Get form elements
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var mobile = document.getElementById('mobile').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+
+    // Validate if at least one field is filled
+    if (name === '' && email === '' && mobile === '' && subject === '' && message === '') {
+        alert('Please enter at least one field before submitting.');
+        return false;
+    }
+
+    // Display success message
+    var successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+
+    // Optionally, you can reset the form after successful submission
+    document.getElementById('php-email-form').reset();
+
+    return true;
+}
+    </script>
+</body>
+
+</html>
