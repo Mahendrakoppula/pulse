@@ -71,25 +71,6 @@
 }
 
 
-
-  
-@media (max-width: 768px) {
-
-  .carousel-item img {
-    max-width: 100%; /* Make the image responsive and fill the container */
-    /* height: 300px; */
-    object-fit: contain; /* Maintain aspect ratio and cover the container */
-  }
-
-  .website-counter {
-    margin-left: 0; /* Reset margin for the counter */
-  }
-
-  
-
-  /* Add more styles for other elements as needed */
-}
-
      .nav-bar {
     display: flex;
     align-items: center;
@@ -104,11 +85,7 @@
     margin-right: 10px; /* Adjust the margin as needed */
   }
 
-  .carousel-item img {
-    width: 100%;
-    /* height: auto; */
-    object-fit:contain;
-}
+
 .scrolling-text {
     white-space: nowrap;
     font-size: 18px; /* Adjust the font size as needed */
@@ -126,6 +103,26 @@
 
 
       </style>
+
+<style>
+    .c-item {
+      height: 50vh;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.carousel-caption{
+    /* animation: slideIn 1s ease-in-out infinite alternate; */
+
+}
+
+
+
+  </style>
 </head>
 
 <body>
@@ -162,28 +159,44 @@
 
 
     <!-- Header Start -->
-    <div id="carouselExampleIndicators" class="carousel slide" style="margin-top: -80px;">
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" style="margin-top: -80px;">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
+    
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/WhatsApp Image 2023-12-17 at 20.58.14.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-item active c-item">
+            <img src="img/WhatsApp Image 2023-12-17 at 20.58.14.jpeg" class="d-block w-100 c-img" alt="Slide 1">
+            <div class="carousel-caption top-0 mt-4">
+              <p class="mt-5 fs-3 text-uppercase">Pulse Content Paragraph one</p>
+              <h1 class="display-1 fw-bolder text-capitalize">Heading</h1>
+             
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="img/WhatsApp Image 2023-12-17 at 20.58.14.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-item c-item">
+            <img src="img/WhatsApp Image 2023-12-17 at 20.58.14.jpeg" class="d-block w-100 c-img" alt="Slide 2">
+            <div class="carousel-caption top-0 mt-4">
+              <p class="text-uppercase fs-3 mt-5">Pulse content Paragraph two</p>
+              <p class="display-1 fw-bolder text-capitalize">Heading</p>
+              
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="img/WhatsApp Image 2023-12-17 at 20.58.14.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-item c-item">
+            <img src="img/WhatsApp Image 2023-12-17 at 20.58.14.jpeg" class="d-block w-100 c-img" alt="Slide 3">
+            <div class="carousel-caption top-0 mt-4">
+              <p class="text-uppercase fs-3 mt-5">Pulse content Paragraph two</p>
+              <p class="display-1 fw-bolder text-capitalize">Heading</p>
+              
+            </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
