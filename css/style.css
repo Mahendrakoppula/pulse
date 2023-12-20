@@ -171,6 +171,10 @@ header{
     }
   }
 
+  .banner img{
+    width: 100vw;
+  }
+
   /*** Scroll ***/
 
   /* @keyframes scrollLeft {
@@ -227,6 +231,9 @@ header{
     font-weight: normal;
 }
 
+.services-wrapper img{
+    height:40vh;
+}
 
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
@@ -385,7 +392,7 @@ header{
 }
 
 .page-header {
-    background: url(../img/logo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-102204.jpg) top center no-repeat;
+    background: url(../img/banner/bannerrr.jpg) top center no-repeat;
     background-size: cover;
     text-shadow: 0 0 30px rgba(0, 0, 0, .1);
 }
