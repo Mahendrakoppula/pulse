@@ -175,25 +175,18 @@ header{
     width: 100vw;
   }
 
-  /*** Scroll ***/
+ .party-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+ }
 
-  /* @keyframes scrollLeft {
-    0% {
-      transform: translateX(50%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+ .party-images img{
+    width:100px;
+ }
 
-  .scrolling-paragraph {
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-    width: 250%;
-    margin: 0 auto;
-    animation: scrollLeft 25s linear infinite;
-  } */
 
 /*** Button ***/
 .btn {
