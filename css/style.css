@@ -49,6 +49,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 100; 
+    background-color: #FFF;
 }
 
 .nav-bar {
@@ -58,7 +59,6 @@ header{
     align-items: center;
     list-style: none;
     position: relative;
-    /* background-color: var(--color2); */
     padding: 12px 20px;
   }
   
