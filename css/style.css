@@ -1,8 +1,8 @@
 /********** Template CSS **********/
 :root {
-    --primary: #0463FA;
+    --primary: #560775;
     --light: #EFF5FF;
-    --dark: #1B2C51;
+    --dark: #F06E01;
 }
 .pules-logo{
     width: 120px;
@@ -79,7 +79,7 @@ header{
     text-decoration: none;
     font-weight: 600;
     font-size: large;
-    color: #0070ac;
+    color: #F06E01;
     text-align: center;
     transition: 0.15s ease-in-out;
     position: relative;
@@ -683,7 +683,7 @@ header{
     border-radius: 5px;
     border: 0px solid black;
     color: rgb(255, 255, 255);
-    background-color: #0070ac;
+    background-color: #F06E01;
     ;
     letter-spacing: 5px;
     font-size: larger;
