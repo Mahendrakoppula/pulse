@@ -140,8 +140,10 @@
     <header>
         <nav>
             <ul class='nav-bar'>
+                <p id="visitorCount" style="    width: 100px;
+                font-size: 12px;">Visitors Count: 120,000</p>
                 <li class='logo'><a href=''><img src='img/logo/pulse logo update.png' /></a></li>
-                <p id="visitorCount">Visitors Count: 120,000</p>
+                
                 <input type='checkbox' id='check' />
                 <span class="menu">
                     <li><a href="index.html">Home</a></li>
@@ -430,26 +432,40 @@
                         </div>
                         <div class="col-lg-6 wow" data-wow-delay="0.5s">
                             <div class="bg-light rounded h-100 d-flex align-items-center p-3">
-                                <form>
+                                <form
+                                class="account-form"
+                                action=""
+                                method="POST"
+                                name="submit-to-google-sheet"
+                                >
                                     <div class="row g-3">
                                         <div class="col-12 col-sm-6">
-                                            <input type="text" class="form-control border-0" placeholder="Full Name" style="height: 55px;">
+                                            <input type="text"  name="FullName" class="form-control border-0" placeholder="Full Name" style="height: 55px;">
                                         </div>
                                         <div class="col-12 col-sm-6">
-                                            <input type="text" class="form-control border-0" placeholder="Mobile Number" style="height: 55px;">
+                                            <input type="text"
+                                            name="PhoneNumber" class="form-control border-0" placeholder="Mobile Number" style="height: 55px;">
                                         </div>
                                         <div class="col-12">
-                                            <input type="email" class="form-control border-0" placeholder="Email" style="height: 55px;">
+                                            <input type="email" 
+                                            name="Email"
+                                            class="form-control border-0" placeholder="Email" style="height: 55px;">
                                         </div>
                                         <div class="col-12">
-                                            <input type="text" class="form-control border-0" placeholder="Subject" style="height: 55px;">
+                                            <input type="text" 
+                                            name="Subject"
+                                            class="form-control border-0" placeholder="Subject" style="height: 55px;">
                                         </div>
                                        
                                         <div class="col-12">
-                                            <textarea class="form-control border-0" rows="5" placeholder="Message"></textarea>
+                                            <textarea class="form-control border-0" 
+                                            name="Message"
+                                            rows="5" placeholder="Message"></textarea>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                            <button class="btn btn-primary w-100 py-3"
+                                            id="submit-button"
+                                            type="submit">Submit</button>
                                         </div>
                                     </div>
                                 </form>

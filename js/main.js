@@ -111,3 +111,35 @@ document.addEventListener('DOMContentLoaded', function () {
     
 })(jQuery);
 
+
+// **Form Data**
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scriptURL = "https://script.google.com/u/0/home/projects/1X6YmTH00uU2ckUxL6Eo9Vdccx4HXiESUKbn20-kMq1EyGYe3AV2FvRxQ/edit";
+    const form = document.forms["submit-to-google-sheet"];
+    const submitButton = document.getElementById("submit-button");
+  
+    if (!submitButton) {
+      console.error("Submit button not found.");
+      return;
+    }
+  
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+  
+      submitButton.innerHTML = '<span>Submitting...</span>';
+  
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          form.reset();
+          submitButton.innerHTML = '<span>Submit</span>';
+          alert("Your response has been submitted successfully!");
+          console.log("Success!", response);
+        })
+        .catch((error) => {
+          submitButton.innerHTML = '<span>Submit</span>';
+          console.error("Error!", error.message);
+        });
+    });
+  });
+
