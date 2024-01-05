@@ -430,29 +430,32 @@
                                 action=""
                                 method="POST"
                                 name="submit-to-google-sheet"
+                                id="submit-to-google-sheet"
+                                
                                 >
                                     <div class="row g-3">
                                         <div class="col-12 col-sm-6">
-                                            <input type="text"  name="FullName" class="form-control border-0" placeholder="Full Name" style="height: 55px;">
+                                            <input type="text" id="name"  name="Full Name" class="form-control border-0" placeholder="Full Name" style="height: 55px;">
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <input type="text"
-                                            name="PhoneNumber" class="form-control border-0" placeholder="Mobile Number" style="height: 55px;">
+                                            name="Mobile Number" id="mobile number" class="form-control border-0" placeholder="Mobile Number" style="height: 55px;">
                                         </div>
                                         <div class="col-12">
                                             <input type="email" 
                                             name="Email"
-                                            class="form-control border-0" placeholder="Email" style="height: 55px;">
+                                            class="form-control border-0" id="email" name="Email" placeholder="Email" style="height: 55px;">
                                         </div>
                                         <div class="col-12">
                                             <input type="text" 
                                             name="Subject"
-                                            class="form-control border-0" placeholder="Subject" style="height: 55px;">
+                                            class="form-control border-0" id="subject" placeholder="Subject" style="height: 55px;">
                                         </div>
                                        
                                         <div class="col-12">
                                             <textarea class="form-control border-0" 
                                             name="Message"
+                                            id="message"
                                             rows="5" placeholder="Message"></textarea>
                                         </div>
                                         <div class="col-12">
@@ -638,6 +641,41 @@ var populationData = {
         },
       });
              </script>
+             <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxA-K5bPOEAPry2yYHyHtvMObWwQnSq7aJ4wP4lUTyAnLkSDsGawzpW8qSGm1tR7of9/exec";
+        const form = document.forms["submit-to-google-sheet"];
+        const submitButton = document.getElementById("submit-button");
+      
+        if (!submitButton) {
+          console.error("Submit button not found.");
+          return;
+        }
+      
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+      
+          submitButton.innerHTML = '<span>Submitting...</span>';
+      
+          fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then((response) => {
+              form.reset();
+              submitButton.innerHTML = '<span>Submit</span>';
+              alert("Your response has been submitted successfully!");
+              console.log("Success!", response);
+            })
+            .catch((error) => {
+              submitButton.innerHTML = '<span>Submit</span>';
+              console.error("Error!", error.message);
+            });
+        });
+      });
+      
+            
+       
+      
+      
+    </script>
 </body>
 
 </html>

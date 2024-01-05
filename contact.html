@@ -118,26 +118,26 @@
                         </div>
                         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="bg-light rounded h-100 d-flex align-items-center p-3">
-                                <form>
+                                <form id="submit-to-google-sheet" name="submit-to-google-sheet">
                                     <div class="row g-3">
                                         <div class="col-12 col-sm-6">
-                                            <input type="text" class="form-control border-0" placeholder="Full Name" style="height: 55px;">
+                                            <input type="text" id="name" class="form-control border-0" name="Full Name" placeholder="Full Name" style="height: 55px;">
                                         </div>
                                         <div class="col-12 col-sm-6">
-                                            <input type="number" class="form-control border-0" placeholder="Mobile Number" style="height: 55px;">
+                                            <input type="number" id="mobile number" class="form-control border-0" name="Mobile Number" placeholder="Mobile Number" style="height: 55px;">
                                         </div>
                                         <div class="col-12">
-                                            <input type="email" class="form-control border-0" placeholder="Email" style="height: 55px;">
+                                            <input type="email" id="email" class="form-control border-0" name="Email" placeholder="Email" style="height: 55px;">
                                         </div>
                                         <div class="col-12">
-                                            <input type="text" class="form-control border-0" placeholder="Subject" style="height: 55px;">
+                                            <input type="text" id="subject" class="form-control border-0" name="Subject" placeholder="Subject" style="height: 55px;">
                                         </div>
                                        
                                         <div class="col-12">
-                                            <textarea class="form-control border-0" rows="5" placeholder="Message"></textarea>
+                                            <textarea class="form-control border-0" id="message" rows="5" name="Message" placeholder="Message"></textarea>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                            <button id="submit-button" class="btn btn-primary w-100 py-3" type="submit">Submit</button>
                                         </div>
                                     </div>
                                 </form>
@@ -234,6 +234,41 @@
 
     return true;
 }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scriptURL = "https://script.google.com/macros/s/AKfycbynsyDAv9EnOTE7m_DCS7-6zn94_fq0QkYizAn1ZPHe1IbrBM43__HYTJjVMR9CWJN4/exec";
+        const form = document.forms["submit-to-google-sheet"];
+        const submitButton = document.getElementById("submit-button");
+      
+        if (!submitButton) {
+          console.error("Submit button not found.");
+          return;
+        }
+      
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+      
+          submitButton.innerHTML = '<span>Submitting...</span>';
+      
+          fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then((response) => {
+              form.reset();
+              submitButton.innerHTML = '<span>Submit</span>';
+              alert("Your response has been submitted successfully!");
+              console.log("Success!", response);
+            })
+            .catch((error) => {
+              submitButton.innerHTML = '<span>Submit</span>';
+              console.error("Error!", error.message);
+            });
+        });
+      });
+      
+            
+       
+      
+      
     </script>
 </body>
 
